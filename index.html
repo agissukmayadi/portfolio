@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,11 +33,21 @@
       .font-poppins {
         font-family: "Poppins", sans-serif;
       }
+      @layer utilities {
+        #heading::after {
+          content: "";
+          display: block;
+          width: 100px; /* Width of the line */
+          height: 2px; /* Height of the line */
+          background-color: #1d4ed8; /* Color of the line */
+          margin: 0.5rem auto 0; /* Center the line and add some spacing */
+        }
+      }
     </style>
   </head>
   <body class="font-poppins">
     <nav
-      class="bg-white fixed w-full z-20 top-0 start-0 py-3"
+      class="bg-white fixed w-full z-20 top-0 start-0 py-1 shadow-md shadow-slate-100"
       data-aos="fade-down"
     >
       <div
@@ -57,6 +67,7 @@
         >
           <i
             class="fa-solid fa-moon text-2xl text-yellow-400 cursor-pointer"
+            id="toogle-theme"
           ></i>
           <button
             data-collapse-toggle="navbar-sticky"
@@ -92,14 +103,14 @@
           >
             <li>
               <a
-                href="#"
+                href="#home"
                 class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >Home</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#about"
                 class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >About</a
               >
@@ -118,18 +129,11 @@
                 >Portfolio</a
               >
             </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
-                >Contact</a
-              >
-            </li>
           </ul>
         </div>
       </div>
     </nav>
-    <section class="mt-16 bg-slate-100 py-5">
+    <section class="mt-16 py-5" id="home">
       <div
         class="container mx-auto flex flex-col md:flex-row md:items-center gap-5 p-4"
       >
@@ -137,7 +141,16 @@
           class="flex-1 md:order-2 md:flex md:justify-center"
           data-aos="zoom-in-up"
         >
-          <img src="img/person.png" alt="" class="md:w-[80%] md:ml-40" />
+          <div class="max-w-2xl static">
+            <img src="img/person.png" alt="" class="z-10" />
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="absolute -z-10 -top-2 -left-10">
+              <path
+                fill="#1D4ED8"
+                d="M50.7,-63.3C61.6,-51.3,63.5,-31.4,67.8,-11.3C72.1,8.8,78.9,29.1,72.9,44.5C66.9,59.9,48.1,70.3,29.6,73.9C11,77.5,-7.5,74.3,-25.5,68.5C-43.6,62.6,-61.3,54.1,-70.3,39.9C-79.4,25.7,-79.9,5.8,-73.9,-10.4C-67.8,-26.5,-55.4,-38.8,-42,-50.3C-28.6,-61.9,-14.3,-72.6,2.8,-76C19.9,-79.3,39.8,-75.2,50.7,-63.3Z"
+                transform="translate(100 100)"
+              />
+            </svg>
+          </div>
         </div>
         <div
           class="flex-1 text-center md:order-1 md:text-left"
@@ -155,33 +168,198 @@
         </div>
       </div>
     </section>
-    <section class="bg-slate-100 py-5">
+    <section class="bg-slate-100 pt-5 pb-16" id="about">
       <div class="container mx-auto">
-        <h2 class="text-center text-3xl font-semibold text-slate-700">
-          About Me
+        <h2
+          class="text-center text-3xl font-semibold text-slate-700 py-8"
+          id="heading"
+        >
+          ABOUT ME
         </h2>
+        <div class="flex justify-between items-center">
+          <div class="flex-1 hidden md:flex md:justify-center">
+            <img src="img/person2.png" class="md:w-[300px]" alt="" />
+          </div>
+          <div
+            class="flex-1 flex flex-col gap-y-4 p-5 items-center justify-center md:items-start"
+          >
+            <h3 class="text-2xl font-semibold">Agis Sukmayadi</h3>
+            <p class="text-slate-700 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              omnis sunt autem? Eum, velit dignissimos. Expedita fuga deleniti
+              ex placeat minus esse, soluta accusantium! Cumque veniam, fugiat
+              similique, sed officiis perspiciatis sit facere placeat dolores
+              ipsa, molestiae ad. Doloremque, velit iusto atque nihil inventore
+              dignissimos quod minima quam quos blanditiis debitis vero corporis
+              aliquid necessitatibus ipsum vel nesciunt facere maiores obcaecati
+              error officia natus quasi? At consequatur perferendis officia
+              fuga, libero est beatae necessitatibus nesciunt, minus placeat
+              atque. Dolore voluptatibus quae molestias quis animi delectus
+              consequuntur nam necessitatibus. Delectus aspernatur numquam rerum
+              voluptas voluptatibus odio accusantium eos quibusdam tempore vel.
+            </p>
+            <div class="flex gap-3">
+              <a
+                href=""
+                target="_blank"
+                class="bg-blue-700 hover:bg-slate-900 transition-all rounded-full text-white text-center w-[30px] h-[30px] flex items-center justify-center cursor-pointer"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href=""
+                target="_blank"
+                class="bg-blue-700 hover:bg-slate-900 transition-all rounded-full text-white text-center w-[30px] h-[30px] flex items-center justify-center cursor-pointer"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href=""
+                target="_blank"
+                class="bg-blue-700 hover:bg-slate-900 transition-all rounded-full text-white text-center w-[30px] h-[30px] flex items-center justify-center cursor-pointer"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row">
+          <div class="flex-1 flex flex-col px-8">
+            <h2
+              class="text-center text-xl font-semibold text-slate-700 py-8"
+              id="heading"
+            >
+              Experience
+            </h2>
+            <ol class="relative border-s border-slate-400">
+              <li class="mb-10 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"
+                ></div>
+                <time
+                  class="mb-1 text-sm font-normal leading-none text-gray-400"
+                  >July 2019</time
+                >
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Web Developer (Internship)
+                </h3>
+                <ul class="ml-6 text-base font-normal text-gray-500 list-disc">
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore minus blanditiis exercitationem non quaerat ab.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore minus blanditiis exercitationem non quaerat ab.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore minus blanditiis exercitationem non quaerat ab.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="flex-1 flex flex-col px-8">
+            <h2
+              class="text-center text-xl font-semibold text-slate-700 py-8"
+              id="heading"
+            >
+              Education
+            </h2>
+            <ol class="relative border-s border-slate-400">
+              <li class="mb-4 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"
+                ></div>
+                <time
+                  class="mb-1 text-sm font-normal leading-none text-gray-400"
+                  >July 2019</time
+                >
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Universitas Bina Sarana Informatika - Sistem Informasi
+                </h3>
+              </li>
+              <li class="mb-4 ms-4">
+                <div
+                  class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"
+                ></div>
+                <time
+                  class="mb-1 text-sm font-normal leading-none text-gray-400"
+                  >July 2019</time
+                >
+                <h3 class="text-lg font-semibold text-gray-900">
+                  SMK Negeri 1 Ciomas - Rekayasa Perangkat Lunak
+                </h3>
+              </li>
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="py-2">
+    <section class="pt-5 pb-16" id="skill">
+      <div class="container mx-auto">
+        <h2
+          class="text-center text-3xl font-semibold text-slate-700 pt-8"
+          id="heading"
+        >
+          SKILLS
+        </h2>
+        <p class="text-center text-slate-500 max-w-3xl mx-auto mt-5">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+          aliquam praesentium neque officia assumenda natus consequatur, eum
+          tempora deserunt quia.
+        </p>
+        <div class="flex flex-wrap justify-center pt-12 gap-8 items-center">
+          <div class="flex flex-col max-w-md md:max-w-sm items-center gap-3">
+            <span
+              class="bg-blue-700 hover:bg-blue-800 transition-all rounded-full text-white text-center w-[50px] h-[50px] flex items-center justify-center cursor-pointer"
+            >
+              <i class="fa-solid fa-swatchbook"></i>
+            </span>
+            <h4 class="text-lg font-semibold text-slate-800">
+              Front End Web Development
+            </h4>
+            <p class="text-slate-500 text-center">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad
+              temporibus repudiandae, consequuntur ratione quia minima velit
+            </p>
+          </div>
+          <div class="flex flex-col max-w-sm items-center gap-3">
+            <span
+              class="bg-blue-700 hover:bg-blue-800 transition-all rounded-full text-white text-center w-[50px] h-[50px] flex items-center justify-center cursor-pointer"
+            >
+              <i class="fa-solid fa-code"></i>
+            </span>
+            <h4 class="text-lg font-semibold text-slate-800">
+              Back End Web Development
+            </h4>
+            <p class="text-slate-500 text-center">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad
+              temporibus repudiandae, consequuntur ratione quia minima velit
+            </p>
+          </div>
+        </div>
+      </div>
       <div
-        class="container mx-auto flex flex-wrap justify-evenly text-center items-center"
+        class="container mx-auto flex flex-wrap justify-evenly text-center items-center mt-6"
       >
-        <div class="w-[150px] p-5">
+        <div class="w-[150px] hover:scale-110 transition-all p-5">
           <img src="img/codeigniter.png" alt="" />
         </div>
-        <div class="w-[150px] p-5">
+        <div class="w-[150px] hover:scale-110 transition-all p-5">
           <img src="img/laravel.png" alt="" />
         </div>
-        <div class="w-[150px] p-5">
+        <div class="w-[150px] hover:scale-110 transition-all p-5">
           <img src="img/bootstrap.png" alt="" />
         </div>
-        <div class="w-[150px] p-5">
+        <div class="w-[150px] hover:scale-110 transition-all p-5">
           <img src="img/tailwind.png" alt="" />
         </div>
-        <div class="w-[150px] p-5">
+        <div class="w-[150px] hover:scale-110 transition-all p-5">
           <img src="img/Mysql.png" alt="" />
         </div>
-        <div class="w-[150px] p-5">
+        <div class="w-[150px] hover:scale-110 transition-all p-5">
           <img src="img/javascript.png" alt="" />
         </div>
       </div>
