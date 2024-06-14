@@ -3,7 +3,9 @@ module.exports = {
   content: [],
   theme: {
     extend: {},
+    fontFamily: {
+      tes: ["Tiny5", "sans-serif"],
+    },
   },
   plugins: [],
-}
-
+};
