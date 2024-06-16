@@ -63,12 +63,12 @@
           >
         </a>
         <div
-          class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center"
+          class="flex md:hidden md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center"
         >
-          <i
+          <!-- <i
             class="fa-solid fa-moon text-2xl text-yellow-400 cursor-pointer"
             id="toogle-theme"
-          ></i>
+          ></i> -->
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -103,6 +103,7 @@
           >
             <li>
               <a
+                id="nav"
                 href="#home"
                 class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >Home</a
@@ -110,6 +111,7 @@
             </li>
             <li>
               <a
+                id="nav"
                 href="#about"
                 class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >About</a
@@ -117,16 +119,26 @@
             </li>
             <li>
               <a
-                href="#"
+                id="nav"
+                href="#skill"
                 class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >Skill</a
               >
             </li>
             <li>
               <a
-                href="#"
+                id="nav"
+                href="#portfolio"
                 class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                 >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                id="nav"
+                href="#contact"
+                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Contact</a
               >
             </li>
           </ul>
@@ -143,7 +155,11 @@
         >
           <div class="max-w-2xl static">
             <img src="img/person.png" alt="" class="z-10" />
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="absolute -z-10 -top-2 -left-10">
+            <svg
+              viewBox="0 0 200 200"
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute -z-10 -top-2 -left-10"
+            >
               <path
                 fill="#1D4ED8"
                 d="M50.7,-63.3C61.6,-51.3,63.5,-31.4,67.8,-11.3C72.1,8.8,78.9,29.1,72.9,44.5C66.9,59.9,48.1,70.3,29.6,73.9C11,77.5,-7.5,74.3,-25.5,68.5C-43.6,62.6,-61.3,54.1,-70.3,39.9C-79.4,25.7,-79.9,5.8,-73.9,-10.4C-67.8,-26.5,-55.4,-38.8,-42,-50.3C-28.6,-61.9,-14.3,-72.6,2.8,-76C19.9,-79.3,39.8,-75.2,50.7,-63.3Z"
@@ -173,15 +189,22 @@
         <h2
           class="text-center text-3xl font-semibold text-slate-700 py-8"
           id="heading"
+          data-aos="zoom-in"
         >
           ABOUT ME
         </h2>
         <div class="flex justify-between items-center">
           <div class="flex-1 hidden md:flex md:justify-center">
-            <img src="img/person2.png" class="md:w-[300px]" alt="" />
+            <img
+              src="img/person2.png"
+              class="max-w-sm"
+              alt=""
+              data-aos="fade-right"
+            />
           </div>
           <div
             class="flex-1 flex flex-col gap-y-4 p-5 items-center justify-center md:items-start"
+            data-aos="fade-left"
           >
             <h3 class="text-2xl font-semibold">Agis Sukmayadi</h3>
             <p class="text-slate-700 text-justify">
@@ -228,10 +251,11 @@
             <h2
               class="text-center text-xl font-semibold text-slate-700 py-8"
               id="heading"
+              data-aos="zoom-in"
             >
               Experience
             </h2>
-            <ol class="relative border-s border-slate-400">
+            <ol class="relative border-s border-slate-400" data-aos="fade-up">
               <li class="mb-10 ms-4">
                 <div
                   class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"
@@ -264,10 +288,11 @@
             <h2
               class="text-center text-xl font-semibold text-slate-700 py-8"
               id="heading"
+              data-aos="zoom-in"
             >
               Education
             </h2>
-            <ol class="relative border-s border-slate-400">
+            <ol class="relative border-s border-slate-400" data-aos="fade-up">
               <li class="mb-4 ms-4">
                 <div
                   class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"
@@ -302,15 +327,22 @@
         <h2
           class="text-center text-3xl font-semibold text-slate-700 pt-8"
           id="heading"
+          data-aos="zoom-in"
         >
           SKILLS
         </h2>
-        <p class="text-center text-slate-500 max-w-3xl mx-auto mt-5">
+        <p
+          data-aos="zoom-in"
+          class="text-center text-slate-500 max-w-3xl mx-auto mt-5"
+        >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
           aliquam praesentium neque officia assumenda natus consequatur, eum
           tempora deserunt quia.
         </p>
-        <div class="flex flex-wrap justify-center pt-12 gap-8 items-center">
+        <div
+          class="flex flex-wrap justify-center pt-12 gap-8 items-center"
+          data-aos="fade-up"
+        >
           <div class="flex flex-col max-w-md md:max-w-sm items-center gap-3">
             <span
               class="bg-blue-700 hover:bg-blue-800 transition-all rounded-full text-white text-center w-[50px] h-[50px] flex items-center justify-center cursor-pointer"
@@ -342,32 +374,276 @@
         </div>
       </div>
       <div
-        class="container mx-auto flex flex-wrap justify-evenly text-center items-center mt-6"
+        class="container mx-auto flex flex-wrap justify-evenly text-center items-center mt-10 px-20" data-aos="zoom-in"
       >
-        <div class="w-[150px] hover:scale-110 transition-all p-5">
+        <div
+          class="w-[150px] hover:scale-110 grayscale transition-all p-5 hover:grayscale-0"
+        >
           <img src="img/codeigniter.png" alt="" />
         </div>
-        <div class="w-[150px] hover:scale-110 transition-all p-5">
+        <div
+          class="w-[150px] hover:scale-110 grayscale transition-all p-5 hover:grayscale-0"
+        >
           <img src="img/laravel.png" alt="" />
         </div>
-        <div class="w-[150px] hover:scale-110 transition-all p-5">
+        <div
+          class="w-[150px] hover:scale-110 grayscale transition-all p-5 hover:grayscale-0"
+        >
           <img src="img/bootstrap.png" alt="" />
         </div>
-        <div class="w-[150px] hover:scale-110 transition-all p-5">
+        <div
+          class="w-[150px] hover:scale-110 grayscale transition-all p-5 hover:grayscale-0"
+        >
           <img src="img/tailwind.png" alt="" />
         </div>
-        <div class="w-[150px] hover:scale-110 transition-all p-5">
+        <div
+          class="w-[150px] hover:scale-110 grayscale transition-all p-5 hover:grayscale-0"
+        >
           <img src="img/Mysql.png" alt="" />
         </div>
-        <div class="w-[150px] hover:scale-110 transition-all p-5">
+        <div
+          class="w-[150px] hover:scale-110 grayscale transition-all p-5 hover:grayscale-0"
+        >
           <img src="img/javascript.png" alt="" />
         </div>
       </div>
     </section>
+    <section class="pt-5 pb-16 bg-slate-100" id="portfolio">
+      <div class="container mx-auto">
+        <h2
+          class="text-center text-3xl font-semibold text-slate-700 pt-8"
+          id="heading"
+          data-aos="zoom-in"
+        >
+          Portfolio
+        </h2>
+        <p
+          data-aos="zoom-in"
+          class="text-center text-slate-500 max-w-3xl mx-auto mt-5"
+        >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+          aliquam praesentium neque officia assumenda natus consequatur, eum
+          tempora deserunt quia.
+        </p>
+        <div class="flex flex-wrap justify-center pt-12 gap-8 items-start" data-aos="zoom-in">
+          <div class="max-w-sm flex flex-col gap-3">
+            <a href="">
+              <div class="h-60">
+                <img
+                  src="img/portfolio/pandawarental/home.png"
+                  alt=""
+                  class="rounded-lg h-full w-full object-cover shadow-md shadow-slate-300"
+                />
+              </div>
+            </a>
+            <a href="">
+              <h3 class="text-2xl font-semibold text-slate-900">
+                Pandawa Rental
+              </h3>
+            </a>
+            <p class="text-slate-500">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+            <a
+              href="#"
+              class="inline-flex w-fit items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="max-w-sm flex flex-col gap-3">
+            <a href="">
+              <div class="h-60">
+                <img
+                  src="https://placehold.co/600x400"
+                  alt=""
+                  class="rounded-lg h-full w-full object-cover shadow-md shadow-slate-300"
+                />
+              </div>
+            </a>
+            <a href="">
+              <h3 class="text-2xl font-semibold text-slate-900">
+                Pandawa Rental
+              </h3>
+            </a>
+            <p class="text-slate-500">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+            <a
+              href="#"
+              class="inline-flex w-fit items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 pb-16" id="contact">
+      <div class="container mx-auto">
+        <h2
+          class="text-center text-3xl font-semibold text-slate-700 pt-8"
+          id="heading"
+          data-aos="zoom-in"
+        >
+          Contact
+        </h2>
+        <p
+          data-aos="zoom-in"
+          class="text-center text-slate-500 max-w-3xl mx-auto mt-5"
+        >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum
+          aliquam praesentium neque officia assumenda natus consequatur, eum
+          tempora deserunt quia.
+        </p>
+        <div class="flex flex-wrap justify-center pt-12 gap-8 items-start" data-aos="fade-up">
+          <div
+            class="flex flex-col items-center shadow-md hover:bg-slate-50 rounded-lg w-[400px] border py-5 px-10 cursor-pointer"
+          >
+            <div
+              class="mb-3 rounded-full border border-dashed border-blue-700 text-blue-700 text-center text-2xl w-[50px] h-[50px] flex items-center justify-center"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h4 class="font-semibold text-slate-600 text-xl">Location</h4>
+            <p class="text-slate-500">Ciomas, Bogor</p>
+          </div>
+          <div
+            class="flex flex-col items-center shadow-md hover:bg-slate-50 rounded-lg w-[400px] border py-5 px-10 cursor-pointer"
+          >
+            <div
+              class="mb-3 rounded-full border border-dashed border-blue-700 text-blue-700 text-center text-2xl w-[50px] h-[50px] flex items-center justify-center"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <h4 class="font-semibold text-slate-600 text-xl">Email</h4>
+            <p class="text-slate-500">agissukmayadi009@gmail.com</p>
+          </div>
+          <div
+            class="flex flex-col items-center shadow-md hover:bg-slate-50 rounded-lg w-[400px] border py-5 px-10 cursor-pointer"
+          >
+            <div
+              class="mb-3 rounded-full border border-dashed border-blue-700 text-blue-700 text-center text-2xl w-[50px] h-[50px] flex items-center justify-center"
+            >
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <h4 class="font-semibold text-slate-600 text-xl">Phone</h4>
+            <p class="text-slate-500">085156134923</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer data-aos="zoom-in">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="#"
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <span
+              class="self-center text-2xl text-blue-700 font-semibold whitespace-nowrap"
+              >Agis Sukmayadi</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0"
+          >
+            <li>
+              <a href="#home" class="hover:underline me-4 md:me-6">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <li>
+              <a href="#skill" class="hover:underline me-4 md:me-6">Skill</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="hover:underline me-4 md:me-6"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:underline me-4 md:me-6"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center"
+          >© 2024
+          <a href="https://flowbite.com/" class="hover:underline"
+            >Agis Sukmayadi</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#nav");
+    let currentSection = "";
+    document.addEventListener("scroll", function () {
+      const scrolledElement = document.documentElement || document.body;
+
+      const scrollTop = scrolledElement.scrollTop;
+      const scrollHeight = scrolledElement.scrollHeight;
+      const clientHeight = scrolledElement.clientHeight;
+      sections.forEach((section) => {
+        if (scrollTop >= section.offsetTop - 100) {
+          currentSection = section.getAttribute("id");
+        }
+        if (scrollHeight - scrollTop == clientHeight) {
+          currentSection = navLinks[navLinks.length - 1]
+            .getAttribute("href")
+            .replace("#", "");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.add("text-slate-900");
+        link.classList.remove("text-blue-700");
+        if (link.getAttribute("href") == `#${currentSection}`) {
+          link.classList.remove("text-slate-900");
+          link.classList.add("text-blue-700");
+        }
+      });
+    });
   </script>
 </html>
