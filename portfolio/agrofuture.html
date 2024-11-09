@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Agis Sukmayadi</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+      @layer utilities {
+        #heading::after {
+          content: "";
+          display: block;
+          width: 100px; /* Width of the line */
+          height: 2px; /* Height of the line */
+          background-color: #1d4ed8; /* Color of the line */
+          margin: 0.5rem auto 0; /* Center the line and add some spacing */
+        }
+      }
+    </style>
+  </head>
+  <body class="font-poppins">
+    <nav
+      class="bg-white fixed w-full z-50 top-0 start-0 py-1 shadow-md shadow-slate-100"
+      data-aos="fade-down"
+    >
+      <div
+        class="container flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="../index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-blue-700 hover:text-blue-800"
+            >AgisSukmayadi.</span
+          >
+        </a>
+        <div
+          class="flex md:hidden md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center"
+        >
+          <!-- <i
+            class="fa-solid fa-moon text-2xl text-yellow-400 cursor-pointer"
+            id="toogle-theme"
+          ></i> -->
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-500 rounded-lg md:hidden hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-200"
+            aria-controls="navbar-sticky"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-sticky"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-slate-100 rounded-lg bg-slate-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+          >
+            <li>
+              <a
+                id="nav"
+                href="../index.html#home"
+                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                id="nav"
+                href="../index.html#about"
+                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                id="nav"
+                href="../index.html#skill"
+                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Skill</a
+              >
+            </li>
+            <li>
+              <a
+                id="nav"
+                href="../index.html#portfolio"
+                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                id="nav"
+                href="../index.html#contact"
+                class="block py-2 px-3 text-slate-900 rounded hover:bg-slate-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-slate-100 py-6 pb-16 mt-16">
+      <div class="container mx-auto px-4 lg:px-24">
+        <h2
+          class="text-center text-3xl font-semibold text-slate-700 py-8"
+          id="heading"
+          data-aos="zoom-in"
+        >
+          Portfolio
+        </h2>
+        <div class="flex flex-col gap-4">
+          <div
+            id="indicators-carousel"
+            class="relative w-full"
+            data-carousel="static"
+          >
+            <!-- Carousel wrapper -->
+            <div class="relative aspect-video overflow-hidden rounded-lg">
+              <!-- Item 1 -->
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item="active"
+              >
+                <img
+                  src="../img/portfolio/agrofuture/home.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/about.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/tourism.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/products.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/product detail.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/cart.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/checkout.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/payment.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+              <div
+                class="hidden duration-700 ease-in-out h-full"
+                data-carousel-item
+              >
+                <img
+                  src="../img/portfolio/agrofuture/order list.PNG"
+                  class="absolute w-full h-full object-cover object-top top-0 left-0"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <!-- Slider indicators -->
+            <div
+              class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
+            >
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="3"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="4"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="5"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="6"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="7"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="8"
+              ></button>
+            </div>
+            <!-- Slider controls -->
+            <button
+              type="button"
+              class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+          <div class="space-y-2">
+            <div class="space-y-2">
+              <h1 class="text-3xl font-bold">Agrofuture</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
+                inventore porro, quis aperiam provident eligendi dolorem
+                obcaecati exercitationem animi quo labore nam ipsam omnis minus
+                qui eius quod neque suscipit placeat doloribus! Perspiciatis,
+                quia error aut nihil voluptates inventore nisi molestiae id,
+                iusto eum at? Perferendis dolor repudiandae doloremque,
+                exercitationem ipsa unde ducimus harum praesentium ratione
+                repellat id magni nam?
+              </p>
+              <p class="text-blue-700 hover:text-blue-900">
+                Technology : Laravel 11, MySQL, Tailwind CSS
+              </p>
+            </div>
+            <a
+              href="https://github.com/agissukmayadi/agrofuture"
+              class="text-blue-700 hover:text-blue-900 cursor-pointer text-right block w-fit float-right"
+              target="_blank"
+              >Source Code</a
+            >
+          </div>
+        </div>
+        <a
+          href="../index.html"
+          class="text-white px-6 py-2 rounded-lg bg-blue-600 block w-fit mt-8 hover:bg-blue-700"
+          >Back</a
+        >
+      </div>
+    </section>
+    <footer data-aos="zoom-in" class="">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="../index.html"
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <span
+              class="self-center text-2xl text-blue-700 font-semibold whitespace-nowrap"
+              >Agis Sukmayadi</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0"
+          >
+            <li>
+              <a href="../index.html#home" class="hover:underline me-4 md:me-6"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#about" class="hover:underline me-4 md:me-6"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="../index.html#skill" class="hover:underline me-4 md:me-6"
+                >Skill</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#portfolio"
+                class="hover:underline me-4 md:me-6"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#contact"
+                class="hover:underline me-4 md:me-6"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center"
+          >© 2024
+          <a href="https://flowbite.com/" class="hover:underline"
+            >Agis Sukmayadi</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
